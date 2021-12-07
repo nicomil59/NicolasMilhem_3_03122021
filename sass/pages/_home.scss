@@ -7,3 +7,20 @@
     gap: 18px;
     margin-top: 62px;
 }
+
+.intro {
+    width: 100%;
+    background-color: $lightgrey;
+    text-align: center;
+    padding: 40px 30px;
+
+    &__title {
+        padding: 0 15px;
+    }
+
+    &__subtitle {
+        margin: 20px 0 25px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
