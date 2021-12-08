@@ -1,12 +1,24 @@
 .footer {
     width: 100%;
     background-color: $darkgrey;
-    // padding: 20px 0 35px;
     padding: 5.5% 0 9.5%;
+
+    @media screen and (min-width: 768px) {
+        padding: 6% 0 6%;
+    }
+
+    @media screen and (min-width: 992px) {
+        padding: 4% 0 4%;
+    }
 
     &__container {
         width: $container-mobile;
         margin: 0 auto;
+
+        @media screen and (min-width: 768px) {
+            width: 90%;
+            max-width: 1440px;
+        }
     }
 
     &__logo {
@@ -16,21 +28,19 @@
         margin-bottom: 20px;
     }
 
+    &__logo, &__link {
+        color:#fff;
+    }
+
     ul {
         display: flex;
         flex-direction: column;
         
-        @media (min-width: 768px) {
-            flex-direction: row;
-        }
-
         li {
-            // margin-bottom: 7px;
             margin-bottom: 2%;
 
-            @media (min-width: 768px) {
-                margin-bottom: 0;
-                margin-right: 5%;
+            @media screen and (min-width: 992px) {
+                margin-bottom: 1%;
             }
         }
 
@@ -44,8 +54,4 @@
         margin-right: 10px;
         font-size: 14px;
     }
-}
-
-.footer__logo, .footer__link {
-    color: $white;
 }
