@@ -277,4 +277,71 @@ body {
   }
 }
 
+.restaurants {
+  background-color: #F6F6F6;
+}
+.restaurants__container {
+  width: 89%;
+  margin: 0 auto;
+  padding: 50px 0 70px;
+}
+.restaurants__list {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restau-card {
+  margin-bottom: 20px;
+}
+.restau-card__container {
+  max-width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  background-color: #FFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.restau-card__figure {
+  height: 70%;
+}
+.restau-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.restau-card__body {
+  height: 30%;
+  padding: 15px 25px 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.restau-card__title {
+  margin-bottom: 5px;
+}
+.restau-card__subtitle {
+  font-weight: 300;
+}
+.restau-card__like {
+  font-size: 24px;
+}
+.restau-card__tag {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  width: 80px;
+  height: 30px;
+  background-color: #99E2D0;
+  border-radius: 3px;
+  color: #149173;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=style.css.map */
