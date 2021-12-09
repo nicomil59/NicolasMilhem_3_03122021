@@ -79,7 +79,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer__container {
-    width: 90%;
     max-width: 1440px;
   }
 }
@@ -202,7 +201,6 @@ body {
 }
 
 .instruction {
-  max-width: 324px;
   background-color: #F6F6F6;
   border-radius: 25px;
   margin-bottom: 20px;
