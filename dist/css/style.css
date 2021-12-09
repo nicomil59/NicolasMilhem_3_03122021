@@ -126,7 +126,7 @@ body {
   width: 100%;
   background-color: #F6F6F6;
   text-align: center;
-  padding: 40px 30px;
+  padding: 40px 30px 50px;
 }
 .intro__title {
   padding: 0 15px;
@@ -204,7 +204,6 @@ body {
   background-color: #F6F6F6;
   border-radius: 25px;
   margin-bottom: 20px;
-  padding: 28px 36px;
   padding: 1.75em 2.25em;
   display: flex;
   align-items: center;
