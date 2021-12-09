@@ -1,0 +1,19 @@
+{
+  "name": "nicolasmilhem_3_03122021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./dist/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicomil59/NicolasMilhem_3_03122021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicomil59/NicolasMilhem_3_03122021/issues"
+  },
+  "homepage": "https://github.com/nicomil59/NicolasMilhem_3_03122021#readme"
+}

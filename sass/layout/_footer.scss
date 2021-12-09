@@ -1,0 +1,56 @@
+.footer {
+    width: 100%;
+    background-color: $darkgrey;
+    padding: 5.5% 0 9.5%;
+
+    @media screen and (min-width: 768px) {
+        padding: 6% 0 6%;
+    }
+
+    @media screen and (min-width: 992px) {
+        padding: 4% 0 4%;
+    }
+
+    &__container {
+        width: $width-container;
+        margin: 0 auto;
+
+        @media screen and (min-width: 768px) {
+            max-width: 1440px;
+        }
+    }
+
+    &__logo {
+        font-family: $font-heading;
+        font-weight: normal;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    &__logo, &__link {
+        color:#fff;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        
+        li {
+            margin-bottom: 2%;
+
+            @media screen and (min-width: 992px) {
+                margin-bottom: 1%;
+            }
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__link .fas {
+        margin-right: 10px;
+        font-size: 14px;
+    }
+}
