@@ -171,24 +171,16 @@ body {
   margin: 0 auto;
   padding: 50px 0 70px;
   background-color: #FFF;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 @media screen and (min-width: 992px) {
   .instructions__container {
     max-width: 1440px;
     padding: 60px 0 40px;
-    align-items: stretch;
   }
-}
-.instructions__title {
-  align-self: flex-start;
 }
 @media screen and (min-width: 992px) {
   .instructions__title {
-    align-self: center;
+    text-align: center;
     font-size: 1.8rem;
   }
 }
@@ -205,10 +197,12 @@ body {
     flex-wrap: wrap;
     gap: 5%;
     margin-top: 50px;
+    padding-left: 0;
   }
 }
 
 .instruction {
+  max-width: 324px;
   background-color: #F6F6F6;
   border-radius: 25px;
   margin-bottom: 20px;
@@ -222,7 +216,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .instruction {
-    width: 325px;
+    width: 324px;
     margin-bottom: 4%;
   }
 }
