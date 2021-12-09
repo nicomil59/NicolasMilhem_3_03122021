@@ -43,9 +43,6 @@ body {
 .header {
   width: 100%;
   height: 62px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #FFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   position: fixed;
@@ -53,9 +50,25 @@ body {
   overflow: hidden;
   z-index: 999;
 }
+.header__container {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 .header__logo img {
   width: 164px;
   display: block;
+}
+.header__back-to-home {
+  position: absolute;
+  left: 23px;
+}
+.header__back-to-home i {
+  font-size: 18px;
 }
 
 .footer {
