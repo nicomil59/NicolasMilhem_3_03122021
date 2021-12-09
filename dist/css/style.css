@@ -53,16 +53,6 @@ body {
   overflow: hidden;
   z-index: 999;
 }
-@media screen and (min-width: 768px) {
-  .header {
-    width: 90%;
-    max-width: 1440px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  }
-}
 .header__logo img {
   width: 164px;
   display: block;
@@ -132,26 +122,12 @@ body {
   gap: 18px;
   margin-top: 62px;
 }
-@media screen and (min-width: 768px) {
-  .location {
-    width: 90%;
-    max-width: 1440px;
-    margin: 62px auto 0;
-  }
-}
 
 .intro {
   width: 100%;
   background-color: #F6F6F6;
   text-align: center;
   padding: 40px 30px;
-}
-@media screen and (min-width: 768px) {
-  .intro {
-    width: 90%;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
 }
 .intro__title {
   padding: 0 15px;
@@ -283,24 +259,68 @@ body {
 .restaurants__container {
   width: 89%;
   margin: 0 auto;
-  padding: 50px 0 70px;
+  padding: 50px 0 62px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__container {
+    max-width: 1440px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants__title {
+    text-align: center;
+    font-size: 1.8rem;
+  }
 }
 .restaurants__list {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .restaurants__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 50px;
+  }
+}
 
 .restau-card {
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .restau-card {
+    margin-bottom: 40px;
+  }
+}
+.restau-card:last-child {
+  margin-bottom: 0;
+}
 .restau-card__container {
-  max-width: 400px;
+  max-width: 500px;
+  margin: 0 auto;
   height: 250px;
   border-radius: 15px;
   background-color: #FFF;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .restau-card__container {
+    min-width: 320px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restau-card__container {
+    min-width: 400px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .restau-card__container {
+    min-width: 500px;
+  }
 }
 .restau-card__figure {
   height: 70%;

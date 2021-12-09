@@ -10,11 +10,11 @@
     gap: 18px;
     margin-top: 62px;
 
-    @media screen and (min-width: 768px) {
-        width: 90%;
-        max-width: 1440px;
-        margin: 62px auto 0;
-    }
+    // @media screen and (min-width: 768px) {
+    //     width: 90%;
+    //     max-width: 1440px;
+    //     margin: 62px auto 0;
+    // }
 
 }
 
@@ -27,11 +27,11 @@
     text-align: center;
     padding: 40px 30px;
 
-    @media screen and (min-width: 768px) {
-        width: 90%;
-        max-width: 1440px;
-        margin: 0 auto;
-    }
+    // @media screen and (min-width: 768px) {
+    //     width: 90%;
+    //     max-width: 1440px;
+    //     margin: 0 auto;
+    // }
 
     &__title {
         padding: 0 15px;
@@ -176,26 +176,70 @@
     &__container {
         width: $container-mobile;
         margin: 0 auto;
-        padding: 50px 0 70px;
+        padding: 50px 0 62px;
+
+        @media screen and (min-width: 768px) {
+            max-width: 1440px;
+        }
+    }
+
+    &__title {
+        @media screen and (min-width: 992px) {
+            text-align: center;
+            font-size: 1.8rem;
+        }
     }
 
     &__list {
         margin-top: 25px;
         display: flex;
         flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5%;
+            margin-top: 50px;
+        }
+
+        // @media screen and (min-width: 992px) {
+        //     max-width: 1200px;
+        // }
     }
 }
 
 .restau-card {
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 40px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
     
     &__container {
-        max-width: 400px;
+        max-width: 500px;
+        margin: 0 auto;
         height: 250px;
         border-radius: 15px;
         background-color: $white;
         box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         position: relative;
+
+        @media screen and (min-width: 768px) {
+            min-width: 320px;
+        }
+
+        @media screen and (min-width: 992px) {
+            min-width: 400px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            min-width: 500px;
+        }
     }
 
     &__figure {

@@ -11,14 +11,14 @@
     overflow: hidden;
     z-index: 999;
 
-    @media screen and (min-width: 768px) {
-        width: 90%;
-        max-width: 1440px;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    }
+    // @media screen and (min-width: 768px) {
+    //     width: 90%;
+    //     max-width: 1440px;
+    //     margin: 0 auto;
+    //     left: 0;
+    //     right: 0;
+    //     box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    // }
 
     &__logo img {
         width: 164px;
