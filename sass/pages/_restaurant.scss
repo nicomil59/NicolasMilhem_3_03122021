@@ -76,6 +76,23 @@
         text-transform: uppercase;
         font-weight: 400;
         font-size: 1rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 40px;
+            height: 3px;
+            background-color: $color-tertiary;
+            position: absolute;
+            left: 0;
+            top: 24px;
+            // z-index: 1;
+        }
+    }
+
+    &__dishes {
+        // background: coral;
+        margin-top: 25px;
     }
 
 }
@@ -84,9 +101,9 @@
 // -------- Plat --------
 
 .dish {
-    width: 350px;
+    // width: 350px;
     height: 68px;
-    margin-top: 25px;
+    margin-bottom: 14px;
     border-radius: 13px;
     background-color: $white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
