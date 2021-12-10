@@ -12,17 +12,13 @@
         flex-direction: column;
     }
 
+    // -- image en-tête ---
+
     &__image {
         width: 100%;
-        height: 250px;
-
-        @media screen and (min-width: 768px) {
-            height: 350px;
-        }
-
-        @media screen and (min-width: 992px) {
-            height: 450px;
-        }
+        // height: 250px;
+        height: 67vw;
+        max-height: 400px;
 
         img {
             width: 100%;
@@ -31,21 +27,24 @@
         }
     }
 
+    // -- corps de la section ---
+
     &__body {
         width: 100%;
         padding: 30px 15px 80px;
+        // padding: 30px 4% 80px;
         background-color: $lightgrey;
         border-top-left-radius: 38px;
         border-top-right-radius: 38px;
-        margin-top: -30px;
+        margin-top: -36px;
 
         @media screen and (min-width: 768px) {
-            width: 80%;
-            max-width: 1200px;
-            margin: -60px auto 0;
+            margin: -36px auto 0;
         }
         @media screen and (min-width: 992px) {
-            margin: -80px auto 0;
+            width: 85%;
+            max-width: 1440px;
+            margin: -60px auto 0;
         }
     }
 
@@ -60,10 +59,31 @@
     &__title {
         font-family: $font-heading;
         font-size: 1.8rem;
+        margin-left: 7px;
     }
 
     &__like {
         font-size: 24px;
+    }
+
+    &__categories {
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 768px) {
+            gap: 5%;
+        }
+
+        @media screen and (min-width: 992px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media screen and (min-width: 1408px) {
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
     }
 
 }
@@ -71,12 +91,22 @@
 // -------- Menu Catégorie --------
 
 .menu-cat {
-    
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 1516px) {
+        margin-bottom: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     &__title {
         text-transform: uppercase;
         font-weight: 400;
         font-size: 1rem;
         position: relative;
+        margin-left: 7px;
 
         &::after {
             content: '';
@@ -110,6 +140,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (min-width: 768px) {
+        // width: 330px;
+    }
+
+    @media screen and (min-width: 992px) {
+        width: 350px;
+    }
 
     &__main {
         width: 100%;
