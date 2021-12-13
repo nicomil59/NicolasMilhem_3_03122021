@@ -14,5 +14,12 @@
         opacity: 0.9;
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
     }
+
+    &--big {
+        border: 0;
+        font-family: $font-text;
+        font-size: 16px;
+        padding: 16px 49px;
+    }
 }
 
