@@ -1,3 +1,8 @@
+.testing-pref {
+  background-clip: text;
+  display: flex;
+}
+
 *,
 ::before,
 ::after {
