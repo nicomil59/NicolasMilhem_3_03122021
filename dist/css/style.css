@@ -181,6 +181,9 @@ body {
 .footer ul li:last-child {
   margin-bottom: 0;
 }
+.footer__link:hover {
+  text-decoration: underline;
+}
 .footer__link .fas {
   margin-right: 10px;
   font-size: 14px;
