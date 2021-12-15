@@ -513,12 +513,6 @@ body {
     justify-content: center;
   }
 }
-@media screen and (min-width: 1408px) {
-  .menu__categories {
-    justify-content: space-between;
-    margin-bottom: 0;
-  }
-}
 .menu__btn {
   display: block;
   margin: 0 auto;
@@ -526,6 +520,15 @@ body {
 
 .menu-cat {
   margin-bottom: 40px;
+}
+.menu-cat:nth-child(1) .menu-cat__dishes {
+  animation-delay: 0.4s;
+}
+.menu-cat:nth-child(2) .menu-cat__dishes {
+  animation-delay: 0.8s;
+}
+.menu-cat:nth-child(3) .menu-cat__dishes {
+  animation-delay: 1.2s;
 }
 .menu-cat:last-child {
   margin-bottom: 0;
@@ -548,8 +551,21 @@ body {
 }
 .menu-cat__dishes {
   margin-top: 25px;
+  animation-name: display-cat;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
+@keyframes display-cat {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .dish {
   height: 68px;
   margin-bottom: 14px;
