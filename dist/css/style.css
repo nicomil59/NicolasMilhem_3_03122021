@@ -426,7 +426,41 @@ body {
   font-weight: 300;
 }
 .restau-card__like {
+  position: relative;
+}
+.restau-card__like .fa-heart {
   font-size: 24px;
+  position: absolute;
+  right: 0;
+}
+.restau-card__like .fa-heart.fas {
+  opacity: 0;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.restau-card__like:hover .far {
+  animation: fade-heart 0.4s ease-in both;
+}
+.restau-card__like:hover .fas {
+  animation: fill-heart 0.4s ease-in both;
+}
+@keyframes fill-heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .restau-card__tag {
   position: absolute;
@@ -484,7 +518,6 @@ body {
 .menu__heading {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 30px;
   padding-right: 20px;
 }
@@ -494,7 +527,42 @@ body {
   margin-left: 7px;
 }
 .menu__like {
+  position: relative;
+}
+.menu__like .fa-heart {
   font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 7px;
+}
+.menu__like .fa-heart.fas {
+  opacity: 0;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.menu__like:hover .far {
+  animation: fade-heart 0.4s ease-in both;
+}
+.menu__like:hover .fas {
+  animation: fill-heart 0.4s ease-in both;
+}
+@keyframes fill-heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .menu__categories {
   margin-bottom: 50px;
