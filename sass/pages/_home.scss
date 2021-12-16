@@ -9,6 +9,11 @@
     align-items: center;
     gap: 18px;
     margin-top: 62px;
+
+    &__name {
+        font-size: 16px;
+        font-weight: 400;
+    }
 }
 
 // -------- Section Intro --------
@@ -264,6 +269,7 @@
 
     &__like {
         position: relative;
+        width: 24px;
 
         .fa-heart {
             font-size: 24px;
