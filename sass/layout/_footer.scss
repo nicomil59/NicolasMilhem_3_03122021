@@ -11,21 +11,9 @@
         padding: 4% 0 4%;
     }
 
-    // @media screen and (min-width: 768px) {
-    //     padding: 6% 0 6%;
-    // }
-
-    // @media screen and (min-width: 992px) {
-    //     padding: 4% 0 4%;
-    // }
-
     &__container {
         width: $width-container;
         margin: 0 auto;
-
-        // @media screen and (min-width: 768px) {
-        //     max-width: $width-container-max;
-        // }
 
         @include mq(tablet) {
             max-width: $width-container-max;
@@ -49,10 +37,6 @@
         
         li {
             margin-bottom: 2%;
-
-            // @media screen and (min-width: 992px) {
-            //     margin-bottom: 1%;
-            // }
 
             @include mq(desktop) {
                 margin-bottom: 1%;

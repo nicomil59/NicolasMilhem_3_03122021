@@ -25,13 +25,6 @@
     @include flex-center;
     animation: spinning 1.5s linear infinite;
 
-    // @media screen and (min-width: 768px) {
-    //     border-width: 12px;
-    //     width: 80px;
-    //     height: 80px;
-    //     font-size: 3rem;
-    // }
-
     @include mq(tablet) {
         border-width: 12px;
         width: 80px;
