@@ -4,8 +4,6 @@
 
 .menu {
     margin-top: 62px;
-    
-    // background-color: red;
 
     &__container {
         display: flex;
@@ -16,14 +14,11 @@
 
     &__image {
         width: 100%;
-        // height: 250px;
         height: 67vw;
         max-height: 400px;
 
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            @include image-fit;
         }
     }
 
@@ -32,26 +27,22 @@
     &__body {
         width: 100%;
         padding: 30px 15px 80px;
-        // padding: 30px 4% 80px;
         background-color: $lightgrey;
         border-top-left-radius: 38px;
         border-top-right-radius: 38px;
         margin-top: -36px;
 
-        @media screen and (min-width: 768px) {
-            margin: -36px auto 0;
-        }
-        @media screen and (min-width: 992px) {
+        @include mq(desktop) {
             width: 85%;
-            max-width: 1440px;
+            max-width: $width-container-max;
             margin: -60px auto 0;
         }
+        
     }
 
     &__heading {
         display: flex;
         justify-content: space-between;
-        // align-items: center;
         margin-bottom: 30px;
         padding-right: 20px;
     }
@@ -59,59 +50,16 @@
     &__title {
         font-family: $font-heading;
         font-size: 1.8rem;
-        margin-left: 7px;
+        margin-left: 7px;        
     }
 
     &__like {
-        position: relative;
+        @include like;
 
         .fa-heart {
-            font-size: 24px;
-            position: absolute;
-            right: 0;
             top: 7px;
-
-            &.fas {
-                opacity: 0;
-                background: linear-gradient(to top, #FF79DA, #9356DC);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-            }
         }
-
-        &:hover {
-            .far {
-                animation: fade-heart 0.4s ease-in both;
-            }
-
-            .fas {
-                animation: fill-heart 0.4s ease-in both;
-            }
-        }
-    }
-
-    // -- Animations coeur --
-    @keyframes fill-heart {
-        0% {
-            opacity: 0;
-
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fade-heart {
-        0% {
-            opacity: 1;
-
-        }
-
-        100% {
-            opacity: 0;
-        }
+        
     }
 
     &__categories {
@@ -119,19 +67,13 @@
         display: flex;
         flex-direction: column;
 
-        @media screen and (min-width: 768px) {
-            gap: 5%;
-        }
-
-        @media screen and (min-width: 992px) {
+        @include mq(desktop) {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 5%;
         }
-        @media screen and (min-width: 1408px) {
-            // justify-content: space-between;
-            // margin-bottom: 0;
-        }
+        
     }
 
     &__btn {
@@ -145,10 +87,6 @@
 
 .menu-cat {
     margin-bottom: 40px;
-
-    @media screen and (min-width: 1516px) {
-        // margin-bottom: 0;
-    }
 
     &:nth-child(1) {
         .menu-cat__dishes {
@@ -187,37 +125,19 @@
             position: absolute;
             left: 0;
             top: 24px;
-            // z-index: 1;
         }
     }
 
     &__dishes {
-        // background: coral;
         margin-top: 25px;
-
-        animation-name: display-cat;
-        animation-duration: 1s;
-        animation-fill-mode: both;
+        animation: display-cat 1s both;
     }
 
 }
-
-@keyframes display-cat {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 
 // -------- Plat --------
 
 .dish {
-    // width: 350px;
     height: 68px;
     margin-bottom: 14px;
     border-radius: 13px;
@@ -239,18 +159,14 @@
             width: 60px;
             transition: width 0.6s ease;
 
-            i {
+            .fa-check-circle {
                 transform: rotate(360deg);
                 transition: transform 0.6s ease;
             }
         }
     }
 
-    @media screen and (min-width: 768px) {
-        // width: 330px;
-    }
-
-    @media screen and (min-width: 992px) {
+    @include mq(desktop) {
         width: 350px;
     }
 
@@ -274,21 +190,13 @@
 
     &__title {
         font-size: 1.1rem;
-
-        // rogne le texte et affiche points de suspension
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @include ellipsis;
     }
 
     &__subtitle {
         font-weight: 300;
         font-size: 0.9rem;
-
-        // rogne le texte et affiche points de suspension
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @include ellipsis;
     }
 
     &__price {
@@ -296,28 +204,21 @@
     }
 
     &__checkmark {
-        // width: 60px;
         width: 0;
         height: 100%;
         background-color: $color-tertiary;
         border-top-right-radius: 13px;
         border-bottom-right-radius: 13px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         overflow: hidden;
         transition: width 0.6s ease;
 
-        i {
+        .fa-check-circle {
             color: $white;
-            font-size: 20px;
+            font-size: 1.25rem;
             transform: rotate(90deg);
             transition: transform 0.6s ease;
         }
     }
-    
 
 }
-
-
-

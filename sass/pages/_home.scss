@@ -4,11 +4,14 @@
     width: 100%;
     height: 50px;
     background-color: $grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     gap: 18px;
     margin-top: 62px;
+
+    &__name {
+        font-size: 1rem;
+        font-weight: 400;
+    }
 }
 
 // -------- Section Intro --------
@@ -23,33 +26,34 @@
     &__title {
         padding: 0 15px;
 
-        @media screen and (min-width: 768px) {
+        @include mq(tablet) {
             margin-top: 1%;
             font-size: 1.6rem;
         }
-
-        @media screen and (min-width: 992px) {
+        
+        @include mq(desktop) {
             font-size: 2rem;
         }
     }
 
     &__subtitle {
         margin: 20px 0 25px;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 300;
 
-        @media screen and (min-width: 768px) {
+        @include mq(tablet) {
             margin: 3% 0 4%;
             font-size: 1.3rem;
             line-height: 1.4;
         }
-        @media screen and (min-width: 992px) {
+        
+        @include mq(desktop) {
             font-size: 1.5rem;
         }
     }
 
     &__btn {
-        @media screen and (min-width: 768px) {
+        @include mq(tablet) {
             margin-bottom: 1.5%;
         }
     }
@@ -65,15 +69,15 @@
         padding: 50px 0 70px;
         background-color: $white;
 
-        @media screen and (min-width: 992px) {
-            max-width: 1440px;
+        @include mq(desktop) {
+            max-width: $width-container-max;
             padding: 60px 0 40px;
         }
     }
 
     &__title {
         
-        @media screen and (min-width: 992px) {
+        @include mq(desktop) {
             text-align: center;
             font-size: 1.8rem;
         }
@@ -86,7 +90,7 @@
         justify-content: center;
         padding-left: 13px;
 
-        @media screen and (min-width: 768px) {
+        @include mq(tablet) {
             flex-direction: row;
             flex-wrap: wrap;
             gap: 5%;
@@ -108,7 +112,7 @@
     z-index: 0;
     box-shadow : 2px 4px 14px rgba(0, 0, 0, 0.15);
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         width: 324px;
         margin-bottom: 4%;
     }
@@ -116,7 +120,7 @@
     &:last-child {
         margin-bottom: 0;
 
-        @media screen and (min-width: 992px) {
+        @include mq(desktop) {
             margin-bottom: 4%;
         }
 
@@ -132,13 +136,11 @@
         border-radius: 50%;
         background-color: $color-primary;
         color: $white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
     } 
 
     &__icon {
-        font-size: 20px;
+        font-size: 1.25rem;
         width: 20px;
         height: 20px;
         display: flex;
@@ -171,13 +173,13 @@
         margin: 0 auto;
         padding: 50px 0 62px;
 
-        @media screen and (min-width: 768px) {
-            max-width: 1440px;
+        @include mq(tablet) {
+            max-width: $width-container-max;
         }
     }
 
     &__title {
-        @media screen and (min-width: 992px) {
+        @include mq(desktop) {
             text-align: center;
             font-size: 1.8rem;
         }
@@ -188,7 +190,7 @@
         display: flex;
         flex-direction: column;
 
-        @media screen and (min-width: 768px) {
+        @include mq(tablet) {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
@@ -204,7 +206,7 @@
 .restau-card {
     margin-bottom: 20px;
 
-    @media screen and (min-width: 1200px) {
+    @include mq(larger-device) {
         margin-bottom: 40px;
     }
 
@@ -221,15 +223,15 @@
         box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         position: relative;
 
-        @media screen and (min-width: 768px) {
+        @include mq(tablet) {
             min-width: 320px;
         }
-
-        @media screen and (min-width: 992px) {
+        
+        @include mq(desktop) {
             min-width: 400px;
         }
-
-        @media screen and (min-width: 1200px) {
+        
+        @include mq(larger-device) {
             min-width: 500px;
         }
     }
@@ -239,9 +241,7 @@
     }
     
     &__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        @include image-fit;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
@@ -263,55 +263,8 @@
     }
 
     &__like {
-        position: relative;
-
-        .fa-heart {
-            font-size: 24px;
-            position: absolute;
-            right: 0;
-
-            &.fas {
-                opacity: 0;
-                background: linear-gradient(to top, #FF79DA, #9356DC);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-            }
-        }
-
-        &:hover {
-            .far {
-                animation: fade-heart 0.4s ease-in both;
-            }
-
-            .fas {
-                animation: fill-heart 0.4s ease-in both;
-            }
-        }
-    }
-
-    // -- Animations coeur --
-    @keyframes fill-heart {
-        0% {
-            opacity: 0;
-
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes fade-heart {
-        0% {
-            opacity: 1;
-
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
+        @include like;
+    }    
 
     &__tag {
         position: absolute;
@@ -322,11 +275,9 @@
         background-color: $color-tertiary;
         border-radius: 3px;
         color: #149173;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 500;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
     }
 
 }
